@@ -370,6 +370,7 @@ class App private constructor (val promptModel: PromptModel) {
         documentTypeRepository = DocumentTypeRepository()
         documentTypeRepository.addKnownTypes()
         documentTypeRepository.addUtopiaTypes()
+        documentTypeRepository.addTransactionType(MatrixKeyBindingTransaction)
     }
 
     private suspend fun documentStoreInit() {
